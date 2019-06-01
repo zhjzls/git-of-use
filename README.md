@@ -16,4 +16,5 @@
              git diff <文件名>
         7. 查看修改日志
              git log 
-        
+        8. 版本回退
+             git reset --hard HEAD
