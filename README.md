@@ -14,3 +14,6 @@
             (初次使用：git push -u origin master)
         
         
+        6. 修改文件后进行新旧对比
+             git diff <文件名>
+        
