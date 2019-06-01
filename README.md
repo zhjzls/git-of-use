@@ -16,8 +16,13 @@
              git diff <文件名>
         7. 查看修改日志
              git log 
+
+    
         8. 版本回退
              git reset --hard HEAD
              git reset --hard <版本号>   // commit值 前5位
         9. 查看每一次命令记录
              git reflog
+        10. 工作区和暂存区的概念
+             工作区表示当前操作区间
+             暂存区包含本地版本库的暂存区和默认master分支（后面可能还有其他开发分支）
