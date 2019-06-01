@@ -18,3 +18,6 @@
              git log 
         8. 版本回退
              git reset --hard HEAD
+             git reset --hard <版本号>   // commit值 前5位
+        9. 查看每一次命令记录
+             git reflog
