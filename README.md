@@ -19,10 +19,28 @@
 
     
         8. 版本回退
-             git reset --hard HEAD
+             git reset --hard HEAD^  // HEAD^表示上一个版本   HEAD^^ 表示上上一个版本  以此类推……
              git reset --hard <版本号>   // commit值 前5位
         9. 查看每一次命令记录
              git reflog
         10. 工作区和暂存区的概念
              工作区表示当前操作区间
              暂存区包含本地版本库的暂存区和默认master分支（后面可能还有其他开发分支）
+        11. 跟踪修改
+             每次修改，如果不用 git add 将改动添加到暂存区，git commit 提交的时候就不会提交本次修改
+             git commit 提交时只看暂存区的数据状态
+             git diff HEAD -- <文件名>      // 查看工作区和版本库最新版本的区别 
+        12. 撤销修改
+             撤销修改分为3个阶段
+                1. 修改文件后没有添加到暂存区   
+                    git checkout -- <文件名>
+                2. 修改文件后添加到暂存区（git add <文件名>） 但没有提交本次修改
+                    git reset HEAD <文件名>     // 此时暂存区是干净的，但工作区有修改，需要丢弃工作区的修改
+                    git checkout --<文件名>
+                3. 修改文件后从暂存区提交到分支了(git commit -m "xxx")
+                    git reset --hard HEAD^ 
+                    或： git reset --hard <版本号>  // 可通过git log 查看对应的版本号，取前5位即可
+
+
+    Questions：
+        1.每次push都需要重新登录——通过设置ssh公秘钥的方式更方便
