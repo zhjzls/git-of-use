@@ -7,7 +7,7 @@
         3. 提交最新改动
             git commit -m "备注内容"
         4. 与远程仓库进行关联
-            git remote add origin <url>
+            git remote add origin <url>     // url 可以为https的链接 ，也可为git://xx链接，默认的git:// 使用ssh
                 (git pull --rebase origin master)
         5. 将本地仓库推送到远端
             git push origin master
@@ -42,5 +42,17 @@
                 3. 修改文件后从暂存区提交到分支了(git commit -m "xxx")
                     git reset --hard HEAD^ 
                     或： git reset --hard <版本号>  // 可通过git log 查看对应的版本号，取前5位即可
+
+
+    ## 分支管理
+        
+        13. 创建切换分支
+             git checkout -b dev    // 创建&&切换分支
+            等同于：
+                git branch dev      // 创建分支
+                git checkout dev      // 切换分支
+             git branch     // 查看当前分支
+             git merge dev  // 合并分支 （将dev 合并到当前分支）
+             git branch -d <分支名>    // 删除分支
     Questions：
         1.每次push都需要重新登录——通过设置ssh公秘钥的方式更方便
