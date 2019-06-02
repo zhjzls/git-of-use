@@ -41,6 +41,6 @@
                     git reset --hard HEAD^ 
                     或： git reset --hard <版本号>  // 可通过git log 查看对应的版本号，取前5位即可
 
-
+                    test撤销： mk9iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii9i
     Questions：
         1.每次push都需要重新登录——通过设置ssh公秘钥的方式更方便
