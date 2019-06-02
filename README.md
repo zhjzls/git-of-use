@@ -34,13 +34,12 @@
              撤销修改分为3个阶段
                 1. 修改文件后没有添加到暂存区   
                     git checkout -- <文件名>
+                        // git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
                 2. 修改文件后添加到暂存区（git add <文件名>） 但没有提交本次修改
                     git reset HEAD <文件名>     // 此时暂存区是干净的，但工作区有修改，需要丢弃工作区的修改
                     git checkout --<文件名>
                 3. 修改文件后从暂存区提交到分支了(git commit -m "xxx")
                     git reset --hard HEAD^ 
                     或： git reset --hard <版本号>  // 可通过git log 查看对应的版本号，取前5位即可
-
-                    test撤销： mk9iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii9i
     Questions：
         1.每次push都需要重新登录——通过设置ssh公秘钥的方式更方便
