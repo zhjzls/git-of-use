@@ -53,6 +53,9 @@
                 git checkout dev      // 切换分支
              git branch     // 查看当前分支
              git merge dev  // 合并分支 （将dev 合并到当前分支）
-             git branch -d <分支名>    // 删除分支
+             git branch -d <分支名>    // 删除工作区分支
+                git push origin :<分支名> // 删除工作区分支后，再删除远端服务器分支
+             也可以直接使用 git push origin -d <分支名> 删除远端分支，此时工作区的分支仍然存在，需手动删除
+
     Questions：
         1.每次push都需要重新登录——通过设置ssh公秘钥的方式更方便
