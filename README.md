@@ -12,6 +12,7 @@
         5. 将本地仓库推送到远端
             git push origin master
             (初次使用：git push -u origin master)
+            push时的 -u 参数表示把origin这个主机设置为默认远程主机，以后用 git push 就可以把当前分支推送到这个主机上的对应分支，是一种简化写法。
         6. 修改文件后进行新旧对比
              git diff <文件名>
         7. 查看修改日志
